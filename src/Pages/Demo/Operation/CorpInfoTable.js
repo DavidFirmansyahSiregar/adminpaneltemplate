@@ -87,8 +87,8 @@ export const CorpInfoTable = ({corporateData}) => {
         //     width: 200
         // },
         {
-            title: 'Actions',
-            key: 'action',
+            title: 'Edit',
+            key: 'Edit',
             fixed: 'right',
             width: 200,
             render: (_, record) => (

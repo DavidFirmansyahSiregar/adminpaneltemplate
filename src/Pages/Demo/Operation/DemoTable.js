@@ -80,11 +80,12 @@ const columns = [
       key: '8',
     },
     {
-      title: 'Action',
+      title: 'Edit',
       key: 'operation',
       fixed: 'right',
       width: 100,
-      render: () => <a>action</a>,
+      render: () => <a>Edit</a>,
+      onchange
     },
 ];
 
