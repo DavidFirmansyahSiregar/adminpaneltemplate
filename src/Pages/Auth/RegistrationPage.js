@@ -2,18 +2,17 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { Button, Form, Input, Checkbox } from "antd";
 
-
 const onFinish = (onClick) => {
   console.log("Success: Your account has been created");
 };
 
 const onFinishFailed = () => {
-  console.log("Failed: Please, fill all the requirement", );
+  console.log("Failed: Please, fill all the requirement");
 };
 
 export const RegistrationPage = () => {
   const navigate = useNavigate();
-  
+
   return (
     <div>
       <Form
@@ -31,17 +30,32 @@ export const RegistrationPage = () => {
           name="username"
           rules={[{ required: true, message: "Please input your username!" }]}
         >
-          <Input />
+          <Input  key={"user"}/>
         </Form.Item>
 
         <Form.Item
           label="Password"
           name="password"
+          
           rules={[{ required: true, message: "Please input your password!" }]}
         >
-          <Input.Password />
+          <Input.Password key={"password"}/>
         </Form.Item>
-
+        <Form.Item
+          label="Confirm Password"
+          name="confirmpassword"
+          rules={[{ required: true, message: "Confirm Password" }]}
+        >
+          <Input  key={"confirmpassword"}/>
+        </Form.Item>
+        <Form.Item
+          label="Email"
+          name="email"
+          rules={[{ required: true, message: "Email" }]}
+        >
+          <Input  key={"email"}/>
+        </Form.Item>
+        
         <Form.Item
           name="remember"
           valuePropName="checked"
@@ -51,15 +65,15 @@ export const RegistrationPage = () => {
         </Form.Item>
 
         <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
-          <Button 
-            type="primary" 
+          <Button
+            type="primary"
             htmlType="submit"
             onClick={() => {
-                localStorage.setItem("credentials", "value");
-                navigate("/login");
+              localStorage.setItem("credentials", "value");
+              navigate("/login");
             }}
-            >
-                Submit
+          >
+            Submit
           </Button>
         </Form.Item>
       </Form>
