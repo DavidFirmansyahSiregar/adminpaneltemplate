@@ -30,32 +30,31 @@ export const RegistrationPage = () => {
           name="username"
           rules={[{ required: true, message: "Please input your username!" }]}
         >
-          <Input  key={"user"}/>
+          <Input key={"user"} />
         </Form.Item>
 
         <Form.Item
           label="Password"
           name="password"
-          
           rules={[{ required: true, message: "Please input your password!" }]}
         >
-          <Input.Password key={"password"}/>
+          <Input.Password key={"password"} />
         </Form.Item>
         <Form.Item
           label="Confirm Password"
           name="confirmpassword"
           rules={[{ required: true, message: "Confirm Password" }]}
         >
-          <Input  key={"confirmpassword"}/>
+          <Input key={"confirmpassword"} />
         </Form.Item>
         <Form.Item
           label="Email"
           name="email"
           rules={[{ required: true, message: "Email" }]}
         >
-          <Input  key={"email"}/>
+          <Input key={"email"} />
         </Form.Item>
-        
+
         <Form.Item
           name="remember"
           valuePropName="checked"
